@@ -272,6 +272,10 @@ footer{color:#b9aebf}
 #answerText .bonus-line{display:inline-block;margin:20px 0 0;padding:10px 22px;border:1px solid #d4debd70;border-radius:999px;background:#ffffff0c;font-size:1.15rem;line-height:1.7;color:#fff6df}
 #answerText .bonus-line strong{font-weight:800;white-space:nowrap;letter-spacing:.3px}
 @media(max-width:480px){#answerText .bonus-label{font-size:1.05rem}#answerText .bonus-amount{font-size:3rem}#answerText .bonus-line{font-size:1.1rem;padding:9px 18px}}
+#answerText a.bonus-line{text-decoration:none;cursor:pointer;min-height:48px;transition:background .18s,border-color .18s}
+#answerText a.bonus-line:hover{background:#ffffff20;border-color:#f4dfac}
+#answerText a.bonus-line:focus-visible{outline:3px solid #f4dfac;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){#answerText a.bonus-line{transition:none}}
 </style>
 </head>
 <body>
@@ -412,8 +416,8 @@ document.querySelectorAll(".answer").forEach(btn=>btn.addEventListener("click",(
  const answerPanel=document.getElementById("answerText");
  answerPanel.dataset.outcome=correct?"correct":"wrong";
  answerPanel.innerHTML=correct
- ? '<div class="result-symbol" aria-hidden="true">✓</div><div class="correct"><span class="correct-headline">ถูกต้องค่ะ!</span><span class="correct-answer">คำตอบคือ A. เชียงใหม่</span></div><p class="bonus-label">ยินดีด้วย คุณได้รับโบนัส</p><p class="bonus-amount">88 <span>บาท</span></p><p class="bonus-instruction">โปรดแคปเจอร์หน้าจอนี้ (Screenshot)<br>และส่งให้ทางเจ้าหน้าที่ เพื่อรับโบนัสได้เลยค่ะ</p><p class="bonus-line">แอดไลน์ <strong>@we88vip</strong></p>'
- : '<div class="result-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="13" width="22" height="15" rx="2"/><rect x="3" y="9" width="26" height="5" rx="1.5"/><path d="M16 9v19M16 9c-9 0-9-8-4-6 3 1 4 6 4 6Zm0 0c9 0 9-8 4-6-3 1-4 6-4 6Z"/></svg></div><div class="wrong"><span class="wrong-headline">ยังไม่ถูกต้องค่ะ</span><span class="wrong-answer">คำตอบที่ถูกต้องคือ A. เชียงใหม่</span></div><p class="bonus-label">แต่คุณยังได้รับโบนัส</p><p class="bonus-amount">48 <span>บาท</span></p><p class="bonus-instruction">โปรดแคปเจอร์หน้าจอนี้ (Screenshot)<br>และส่งให้ทางเจ้าหน้าที่ เพื่อรับโบนัสได้เลยค่ะ</p><p class="bonus-line">แอดไลน์ <strong>@we88vip</strong></p>';
+ ? '<div class="result-symbol" aria-hidden="true">✓</div><div class="correct"><span class="correct-headline">ถูกต้องค่ะ!</span><span class="correct-answer">คำตอบคือ A. เชียงใหม่</span></div><p class="bonus-label">ยินดีด้วย คุณได้รับโบนัส</p><p class="bonus-amount">88 <span>บาท</span></p><p class="bonus-instruction">โปรดแคปเจอร์หน้าจอนี้ (Screenshot)<br>และส่งให้ทางเจ้าหน้าที่ เพื่อรับโบนัสได้เลยค่ะ</p><a class="bonus-line" href="https://lin.ee/8hovFsY" target="_blank" rel="noopener noreferrer" aria-label="แอดไลน์ @we88vip เพื่อรับโบนัส">แอดไลน์ <strong>@we88vip</strong> ↗</a>'
+ : '<div class="result-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="13" width="22" height="15" rx="2"/><rect x="3" y="9" width="26" height="5" rx="1.5"/><path d="M16 9v19M16 9c-9 0-9-8-4-6 3 1 4 6 4 6Zm0 0c9 0 9-8 4-6-3 1-4 6-4 6Z"/></svg></div><div class="wrong"><span class="wrong-headline">ยังไม่ถูกต้องค่ะ</span><span class="wrong-answer">คำตอบที่ถูกต้องคือ A. เชียงใหม่</span></div><p class="bonus-label">แต่คุณยังได้รับโบนัส</p><p class="bonus-amount">48 <span>บาท</span></p><p class="bonus-instruction">โปรดแคปเจอร์หน้าจอนี้ (Screenshot)<br>และส่งให้ทางเจ้าหน้าที่ เพื่อรับโบนัสได้เลยค่ะ</p><a class="bonus-line" href="https://lin.ee/8hovFsY" target="_blank" rel="noopener noreferrer" aria-label="แอดไลน์ @we88vip เพื่อรับโบนัส">แอดไลน์ <strong>@we88vip</strong> ↗</a>';
 
  replayStory();
 }));
